@@ -6,87 +6,136 @@
     <title>Prototüüpimise arendusmudel</title>
 </head>
 <body>
-    <h1>Prototüüpimise arendusmudel</h1><br>
-    
+
+    <h1>Prototüüpimise arendusmudel</h1>
+
     <p>
-        Prototüüpimise arendusmudel põhineb süsteemi varajase versiooni ehk prototüübi loomisel. 
-        Prototüüp on lihtsustatud mudel, mida kasutatakse ideede katsetamiseks ja kasutajatele 
-        demonstreerimiseks. Seda saab kasutada erinevates arenduse etappides, näiteks nõuete 
-        kogumisel, disaini uurimisel ja kasutajaliidese kavandamisel.<br><br>
-
-        Selle mudeli peamine eesmärk on saada kasutajatelt varajast tagasisidet ning täpsustada 
-        süsteemi nõudeid enne lõpliku lahenduse loomist. Erinevalt traditsioonilistest mudelitest 
-        ei koostata kohe täielikku ja muutumatut analüüsi, vaid süsteemi arendatakse iteratiivselt.
-    </p><br><br>
-
-    <h2>Prototüüpimise etapid</h2><br>
-    
-    <p>
-        <h3>Peamised etapid on järgmised:</h3>
-        <ul>
-            <li><strong>Nõuete kogumine</strong><br>
-            Nõudeid kogutakse üldisel tasemel. Samal ajal pannakse kirja ka need kohad, 
-            mida tuleb hiljem täpsustada.</li><br>
-
-            <li><strong>Kiire kavandamine</strong><br>
-            Keskendutakse süsteemi nähtavale osale (sisend, väljund, kasutajaliides). 
-            Selle tulemusena valmib esialgne prototüüp.</li><br>
-
-            <li><strong>Hindamine</strong><br>
-            Klient testib prototüüpi ja annab tagasisidet, mille põhjal saab oma nõudeid täpsustada.</li><br>
-
-            <li><strong>Iteratsioon</strong><br>
-            Prototüüpi täiustatakse korduvalt, kuni see vastab kasutaja ootustele ja vajadustele.</li>
-        </ul>
-    </p><br><br>
-
-    <h2>Prototüüpimise eelised</h2><br>
-    
-    <ul>
-        <li>Parem kasutusmugavus</li>
-        <li>Täpsem vastavus kasutaja vajadustele</li>
-        <li>Varajane tagasiside kasutajatelt</li>
-        <li>Parem süsteemi kvaliteet ja hooldatavus</li>
-        <li>Väiksem arendusrisk ja ajakulu</li>
-    </ul><br><br>
-
-    <h2>Prototüüpimise eripärad</h2><br>
-    
-    <p>
-        Prototüüp peab valmima kiiresti ning ei pea sisaldama kogu funktsionaalsust. 
-        See keskendub eelkõige neile osadele, millest ei ole hästi aru saadud. 
-        Sageli ei sisalda prototüüp vigade kontrolli ega käsitle mittefunktsionaalseid nõudeid 
-        (näiteks turvalisust või jõudlust).
-    </p><br><br>
-
-    <h2>Prototüüpimise tüübid</h2><br>
-    
-    <ul>
-        <li><strong>Ühekordne prototüüpimine (Throw-away prototyping)</strong><br>
-        Prototüüp luuakse ainult ideede testimiseks ja visatakse hiljem ära, 
-        sest see ei sobi lõpliku süsteemi aluseks.</li><br>
-
-        <li><strong>Evolutsiooniline prototüüpimine (Evolutionary prototyping)</strong><br>
-        Prototüüpi arendatakse järk-järgult edasi, kuni sellest saab lõplik süsteem.</li><br>
-
-        <li><strong>Lisanduv prototüüpimine (Incremental prototyping)</strong><br>
-        Süsteem arendatakse osade kaupa, kus iga osa on eraldi prototüüp.</li>
-    </ul><br><br>
-
-    <h2>Kokkuvõte</h2><br>
-    
-    <p>
-        Prototüüpimise mudel on iteratiivne arendusviis, mis võimaldab varakult saada 
-        kasutajate tagasisidet ja teha muudatusi jooksvalt. See sobib hästi projektidele, 
-        kus nõuded ei ole alguses täielikult selged või võivad aja jooksul muutuda. 
-        Õige arendusmudeli valik sõltub alati konkreetsest projektist, meeskonnast 
-        ja kliendi vajadustest.
+        Prototüüpimise arendusmudel põhineb süsteemi varajase versiooni ehk prototüübi loomisel.
+        Prototüüp on lihtsustatud mudel, mida kasutatakse ideede katsetamiseks ja kasutajatele
+        demonstreerimiseks.
     </p>
 
+    <p>
+        Selle mudeli peamine eesmärk on saada kasutajatelt varajast tagasisidet ning täpsustada
+        süsteemi nõudeid enne lõpliku lahenduse loomist. Süsteemi arendatakse iteratiivselt ehk
+        korduste kaudu.
+    </p>
+
+    <h2>Põhitõmbenumber</h2>
+
+    <p>
+        Prototüüpimise mudeli kõige olulisem omadus on prototüübi loomine ja pidev täiustamine.
+        Kasutajad saavad süsteemi varakult proovida ning anda tagasisidet, mille põhjal tehakse
+        muudatusi ja parandusi.
+    </p>
+
+    <h2>Prototüüpimise etapid</h2>
+
+    <h3>Peamised etapid on järgmised:</h3>
+
+    <ul>
+        <li>
+            <strong>Nõuete kogumine</strong><br>
+            Kogutakse süsteemi üldised nõuded ning pannakse kirja kohad,
+            mida tuleb hiljem täpsustada.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>Kiire kavandamine</strong><br>
+            Luuakse süsteemi esialgne prototüüp ja kasutajaliides.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>Hindamine</strong><br>
+            Kasutajad testivad prototüüpi ja annavad tagasisidet.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>Iteratsioon</strong><br>
+            Prototüüpi täiustatakse seni, kuni see vastab kasutaja vajadustele.
+        </li>
+    </ul>
+
+    <h2>Prototüüpimise eelised</h2>
+
+    <ul>
+        <li>Varajane kasutajate tagasiside</li>
+        <li>Parem vastavus kasutaja vajadustele</li>
+        <li>Lihtsam nõuete täpsustamine</li>
+        <li>Väiksem risk vigade tekkimiseks</li>
+        <li>Parem kasutusmugavus</li>
+    </ul>
+
+    <h2>Prototüüpimise puudused</h2>
+
+    <ul>
+        <li>Võib võtta palju aega korduvate muudatuste tõttu</li>
+        <li>Kasutajad võivad arvata, et prototüüp on juba valmis süsteem</li>
+        <li>Halvasti planeeritud prototüüp võib suurendada arenduskulusid</li>
+        <li>Mõnikord keskendutakse liiga palju välimusele ja liiga vähe süsteemi kvaliteedile</li>
+    </ul>
+
+    <h2>Prototüüpimise eripärad</h2>
+
+    <p>
+        Prototüüp peab valmima kiiresti ning ei pea sisaldama kogu funktsionaalsust.
+        Sageli kasutatakse seda keerukate või ebaselgete süsteemiosade katsetamiseks.
+    </p>
+
+    <h2>Prototüüpimise tüübid</h2>
+
+    <ul>
+        <li>
+            <strong>Ühekordne prototüüpimine (Throw-away prototyping)</strong><br>
+            Prototüüp luuakse ainult testimiseks ja visatakse hiljem ära.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>Evolutsiooniline prototüüpimine (Evolutionary prototyping)</strong><br>
+            Prototüüpi arendatakse edasi kuni lõpliku süsteemini.
+        </li>
+
+        <br>
+
+        <li>
+            <strong>Lisanduv prototüüpimine (Incremental prototyping)</strong><br>
+            Süsteem arendatakse väiksemate osade kaupa.
+        </li>
+    </ul>
+
     <h2>Prototüübi loomise protsessi joonis</h2>
-    <img src="../images/prototuupimine.jpeg" alt="Prototüübi loomise protsess">
-    <br><br>
-    <a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/1224_prototpimine.html">EUCIP</a>
+
+    <img src="../images/prototuupimine.jpeg" alt="Prototüübi loomise protsess" width="500">
+
+    <h2>Infoallikad</h2>
+
+    <ul>
+        <li>
+            <a href="https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/1224_prototpimine.html">
+                EUCIP – Prototüüpimine
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.geeksforgeeks.org/software-engineering-prototyping-model/">
+                GeeksforGeeks – Prototyping Model
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.tutorialspoint.com/software_engineering/software_engineering_prototyping_model.htm">
+                TutorialsPoint – Prototyping Model
+            </a>
+        </li>
+    </ul>
 
 </body>
 </html>
