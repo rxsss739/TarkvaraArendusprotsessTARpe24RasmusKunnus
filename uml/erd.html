@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERD – Entity-Relationship Diagrammid</title>
+</head>
+<body>
+
+    <h1>ERD (Entity-Relationship Diagrammid)</h1><br>
+
+    <p>
+        ERD ehk Entity-Relationship Diagram on andmebaaside modelleerimise tööriist, mis kirjeldab
+        süsteemi andmestruktuuri, andmeobjekte (olemite), nendevahelisi seoseid ning omadusi.
+        ERD annab visuaalse ülevaate sellest, kuidas andmed on loogiliselt omavahel seotud ja kuidas
+        neid saab andmebaasitabelitesse teisendada.  
+    </p><br><br>
+
+    <h2>Kus ERD diagramme kasutatakse?</h2><br>
+    <p>
+        ERD-sid kasutatakse peamiselt andmebaaside analüüsimisel, planeerimisel ja disainimisel.
+        Neid rakendatakse:
+    </p>
+    <ul>
+        <li>tarkvaraarenduses enne andmebaasi loomist;</li>
+        <li>infosüsteemide modelleerimisel;</li>
+        <li>andmebaasi normaliseerimisel;</li>
+        <li>suhete ja sõltuvuste tuvastamisel süsteemi eri andmeüksuste vahel;</li>
+        <li>õpetamisel ja dokumenteerimisel.</li>
+    </ul><br><br>
+
+    <h2>ERD ühenduselemendid</h2><br>
+
+    <h3>1. Olemid (Entities)</h3>
+    <p>
+        Olemid esindavad andmeobjekte (nt Klient, Tellimus, Toode). ERD-s joonistatakse need tavaliselt ristkülikuna.
+    </p>
+    <img src="../images/erdentitydiagram.png" alt="ERD Entity"><br><br>
+
+    <h3>2. Atribuudid (Attributes)</h3>
+    <p>
+        Atribuudid on olemite omadused (nt kliendi nimi, telefon, toote hind). ERD-s tähistatakse neid ovaalidega.
+    </p>
+    <img src="../images/erdattributediagram.png" alt="ERD Attribute"><br><br>
+
+    <h3>3. Suhted (Relationships)</h3>
+    <p>
+        Suhted näitavad, kuidas olemid omavahel seotud on. ERD-s tähistatakse neid rombikujuga või
+        Crow’s Foot stiilis joonte ja märkidega.
+    </p>
+    <img src="../images/erdrelationshipdiagram.png" alt="ERD Relationship"><br><br><br>
+
+    <h2>ERD seostetähised ja otsad</h2><br>
+
+    <h3>Crow’s Foot tähistused</h3>
+    <p>
+        Ühendusjoonte otsad näitavad seoste kardinaalsust. Peamised tüübid:
+    </p>
+
+    <ul>
+        <li><strong>1 : 1 (One-to-One)</strong> – üks objekt seostub ühe teise objektiga.</li><br>
+        <li><strong>1 : M (One-to-Many)</strong> – üks objekt võib seostuda mitme teise objektiga.</li><br>
+        <li><strong>M : N (Many-to-Many)</strong> – mitu objekti võivad seostuda mitme teise objektiga.</li><br>
+        <li><strong>Kohustuslik / vabatahtlik seos</strong> – tähistatakse ringi ja triipudega (mandatory/optional).</li>
+    </ul>
+
+    <img src="../images/erdcrowsfoot.png" alt="ERD Crow's Foot tähised"><br><br><br>
+
+
+
+    <h2>Mida olemitabelis olema peab ja olla saab?</h2><br>
+    <p>
+        Kui ERD teisendatakse andmebaasi, muutub iga olem tabeliks. Olemitabel sisaldab:
+    </p>
+
+    <ul>
+        <li><strong>Tabeli nimi</strong> – vastab olemile (Klient, Tellimus, Toode).</li><br>
+        <li><strong>Atribuudid</strong> – tabeli veerud (nimi, aadress, hind).</li><br>
+        <li><strong>Võtmed</strong> – tabeli identifitseerimiseks ja seoste loomiseks.</li><br>
+        <li><strong>Andmetüübid</strong> – nt VARCHAR, INT, DATE.</li><br>
+        <li><strong>Piirangud</strong> – nt NOT NULL, UNIQUE, DEFAULT väärtused.</li>
+    </ul><br><br>
+
+
+
+    <h2>Võtmete tüübid andmebaasis</h2><br>
+
+    <h3>Primary Key (PK)</h3>
+    <p>
+        Primaarvõti on tabeli peamine identifikaator.  
+        See peab olema:
+    </p>
+    <ul>
+        <li>unikaalne,</li>
+        <li>mitte-null (NOT NULL),</li>
+        <li>üheselt määratlev tabeli kirje.</li>
+    </ul>
+
+    <h3>Foreign Key (FK)</h3>
+    <p>
+        Väivõti viitab teise tabeli primaarvõtmele ja loob seose tabelite vahel.  
+        Seda kasutatakse <strong>1:M ja M:N seoste</strong> realiseerimiseks.
+    </p>
+
+    <h3>Composite Key</h3>
+    <p>
+        Koosvõti koosneb mitmest atribuudist, mis üheskoos moodustavad unikaalse identifikaatori.
+        Kasutatakse sageli seostabelites (nt Tellimus_Toode tabelis: tellimus_id + toode_id).
+    </p>
+
+    <h3>Key (üldmõiste)</h3>
+    <p>
+        „Key” tähendab üldiselt mis tahes välja või väljade kombinatsiooni, mida kasutatakse kirje tuvastamiseks
+        või seostamiseks. Kõik PK, FK ja Composite Key on võtmete alamtüübid.
+    </p><br><br>
+
+
+
+    <h2>Kuidas võtmeid koos olemitabelitega kasutatakse?</h2><br>
+    <p>
+        ERD teisendamisel andmebaasi muutuvad võtmed tabeli funktsionaalseks osaks:
+    </p>
+
+    <ul>
+        <li><strong>Primaarvõti</strong> määrab iga tabeli rea unikaalsuse.</li><br>
+        <li><strong>Väivõti</strong> viitab teise tabeli PK-le ja hoiab tabelitevahelise tervikluse.</li><br>
+        <li><strong>Koosvõti</strong> tagab unikaalsuse seostabelites M:N seoste jaoks.</li>
+    </ul>
+
+    <p>
+        ERD annab visuaalse mudeli, kuid tabelid ja võtmed rakendavad selle mudeli andmebaasis.  
+    </p>
+
+    <p>
+        Seega ERD tagab, et andmebaasis on korrektsed seosed ja vältitakse dubleerimist.
+    </p><br><br>
+
+
+    <h2>Viited</h2>
+    <ul>
+        <li><a href="https://www.lucidchart.com/pages/er-diagrams">Lucidchart – ERD selgitus</a></li>
+        <li><a href="https://www.vertabelo.com/blog/what-is-erd/">Vertabelo – Mis on ERD?</a></li>
+        <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/">Visual Paradigm – ERD juhend</a></li>
+    </ul>
+
+</body>
+</html>
