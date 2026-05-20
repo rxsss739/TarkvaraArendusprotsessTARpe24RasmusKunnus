@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UML Diagrammid</title>
+</head>
+<body>
+    <h1>Unified Modeling Language (UML)</h1><br>
+
+    <p>
+        Unified Modeling Language (UML) on standardiseeritud graafiline modelleerimiskeel, 
+        mida kasutatakse tarkvarasüsteemide ja protsesside kirjeldamiseks. UML võimaldab 
+        visualiseerida süsteemi struktuuri, käitumist ja interaktsioone erinevate diagrammide abil.
+        See on laialdaselt kasutusel tarkvaraarenduses, et aidata analüütikutel, arendajatel ja 
+        projektijuhtidel ühtselt mõista süsteemi ülesehitust ja toimimist.
+    </p><br><br>
+
+    <h2>UML põhidiagrammid</h2><br>
+
+    <h3>Use Case diagramm</h3>
+    <p>
+        Use Case diagramm kirjeldab süsteemi funktsionaalsust kasutaja vaatepunktist. 
+        See näitab, milliseid tegevusi (use case'e) kasutajad ehk aktorid saavad süsteemis teha.
+    </p>
+
+    <h4>Kujundid ja elemendid</h4>
+    <ul>
+        <li><strong>Aktor</strong> – inimene või süsteem, kes suhtleb modelleeritava süsteemiga (joonistatakse pulgakujulisena).</li><br>
+        <li><strong>Use Case</strong> – süsteemi funktsionaalsus (ovaalne kujund).</li><br>
+        <li><strong>Seosed</strong> – jooned, mis ühendavad aktori ja use case'i.</li><br>
+        <li><strong>Include / Extend</strong> – seosed use case’ide vahel lisafunktsionaalsuse näitamiseks.</li>
+    </ul><br>
+
+    <h4>Näidisjoonis</h4>
+    <img src="../images/umlusecase.png" alt="Use Case diagramm"><br><br><br>
+
+
+    <h3>Class diagramm</h3>
+    <p>
+        Class diagramm kirjeldab süsteemi struktuuri: klasse, nende omadusi, meetodeid ning omavahelisi suhteid.
+        See on üks olulisemaid UML diagrammide tüüpe objektorienteeritud arenduses.
+    </p>
+
+    <h4>Kujundid ja elemendid</h4>
+    <ul>
+        <li><strong>Klass</strong> – ristkülik, mis jaguneb kolmeks: nimi, atribuudid, meetodid.</li><br>
+        <li><strong>Assotsiatsioon</strong> – tavaline seos klasside vahel (joon).</li><br>
+        <li><strong>Pärilus</strong> – noolega seos, mis näitab alamklassi ja ülemklassi suhet.</li><br>
+        <li><strong>Kompositsioon / Aggregatsioon</strong> – näitab „osa–tervik“ suhteid.</li>
+    </ul><br>
+
+    <h4>Näidisjoonis</h4>
+    <img src="../images/umlclassdiagram.png" alt="Class diagramm"><br><br><br>
+
+    <h3>Sequence diagramm</h3>
+    <p>
+        Sequence diagramm kirjeldab objektide omavahelist ajaliselt järjestatud suhtlust.
+        Seda kasutatakse protsesside ja töövoogude detailseks kirjeldamiseks.
+    </p>
+
+    <h4>Kujundid ja elemendid</h4>
+    <ul>
+        <li><strong>Osalejad</strong> – objektid või süsteemi komponendid (kastid ülal).</li><br>
+        <li><strong>Elujoon</strong> – vertikaalne punktiirjoon, mis näitab objekti eluaega.</li><br>
+        <li><strong>Sõnum</strong> – nool, mis näitab ühe objekti tegevust teise suhtes.</li><br>
+        <li><strong>Aktiveerimisriba</strong> – kitsas ristkülik, mis näitab, millal objekt on aktiivne.</li>
+    </ul><br>
+
+    <h4>Näidisjoonis</h4>
+    <img src="../images/umlsequencediagram.jpg" alt="Sequence diagramm"><br><br><br>
+
+
+    <h3>State diagramm</h3>
+    <p>
+        State diagramm kirjeldab objekti elutsükli erinevaid olekuid ja üleminekuid nende vahel.
+        Seda kasutatakse näiteks kasutaja sessiooni, masina töörežiimide või mängu olekute modelleerimiseks.
+    </p>
+
+    <h4>Kujundid ja elemendid</h4>
+    <ul>
+        <li><strong>Algolek</strong> – täidetud must ring.</li><br>
+        <li><strong>Oleku kast</strong> – näitab objekti olekut ning selles toimuvaid tegevusi.</li><br>
+        <li><strong>Üleminek</strong> – nool ühe oleku juurest teise juurde.</li><br>
+        <li><strong>Lõppolek</strong> – must ring valge ringi sees.</li>
+    </ul><br>
+
+    <h4>Näidisjoonis</h4>
+    <img src="../images/umlstatediagram.png" alt="State diagramm"><br><br><br>
+
+
+    <h3>Activity diagramm (vabalt valitud)</h3>
+    <p>
+        Activity diagramm kirjeldab protsessi või töövoo järjestust. 
+        Seda kasutatakse tegevuste ja otsustuspunktide visualiseerimiseks.
+    </p>
+
+    <h4>Kujundid ja elemendid</h4>
+    <ul>
+        <li><strong>Tegevus</strong> – ümardatud ristkülik, mis näitab toimingut.</li><br>
+        <li><strong>Otsus</strong> – romb, kust hargnevad erinevad teed.</li><br>
+        <li><strong>Algus / Lõpp</strong> – samad märgid mis state diagrammis.</li><br>
+        <li><strong>Järjestusjoon</strong> – nool, mis näitab tegevuste järjekorda.</li>
+    </ul><br>
+
+    <h4>Näidisjoonis</h4>
+    <img src="../images/umlactivitydiagram.jpg" alt="Activity diagramm"><br><br><br>
+
+
+    <h2>Viited</h2>
+    <ul>
+        <li><a href="https://www.uml.org/">UML ametlik koduleht</a></li>
+        <li><a href="https://sparxsystems.com/resources/uml2_tutorial/">UML 2.0 Tutorial</a></li>
+        <li><a href="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/">UML selgitused – Visual Paradigm</a></li>
+    </ul>
+
+</body>
+</html>
